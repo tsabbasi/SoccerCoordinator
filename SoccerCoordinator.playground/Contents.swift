@@ -1,6 +1,4 @@
-//: Playground - noun: a place where people can play
-
-import UIKit
+// Project | Soccer League Coordinator 
 
 // Single Player Data | Dictionaries
 
@@ -78,15 +76,15 @@ getPlayersExperience()
 
 // Defining Teams within the soccer league
 
-var dragons = [Dictionary<String, String>]()
+var Dragons = [Dictionary<String, String>]()
 
-var sharks = [Dictionary<String, String>]()
+var Sharks = [Dictionary<String, String>]()
 
-var raptors = [Dictionary<String, String>]()
+var Raptors = [Dictionary<String, String>]()
 
 // Collection of total teams within the soccer league
 
-var teams = [dragons, sharks, raptors]
+var teams = [Dragons, Sharks, Raptors]
 
 // Determining an even number of experienced and unexperienced players amongst X number of teams (defined above)
 
@@ -116,36 +114,36 @@ func dividePlayersEvenly() {
 
     for player in allPlayers {
     
-        if (dragons.count < totalPlayersInEachTeam && dragonsExp < experiencedPlayersInEachTeam && player["soccerExperience"] == "YES") {
+        if (Dragons.count < totalPlayersInEachTeam && dragonsExp < experiencedPlayersInEachTeam && player["soccerExperience"] == "YES") {
         
             dragonsExp+=1
         
-            dragons.append(player)
+            Dragons.append(player)
         
-        } else if (dragons.count < totalPlayersInEachTeam && dragonsUnExp < unexperiencedPlayersInEachTeam && player["soccerExperience"] == "NO") {
+        } else if (Dragons.count < totalPlayersInEachTeam && dragonsUnExp < unexperiencedPlayersInEachTeam && player["soccerExperience"] == "NO") {
         
             dragonsUnExp+=1
-            dragons.append(player)
+            Dragons.append(player)
         
-        } else if (sharks.count < totalPlayersInEachTeam && sharksExp < experiencedPlayersInEachTeam && player["soccerExperience"] == "YES") {
+        } else if (Sharks.count < totalPlayersInEachTeam && sharksExp < experiencedPlayersInEachTeam && player["soccerExperience"] == "YES") {
         
             sharksExp+=1
-            sharks.append(player)
+            Sharks.append(player)
         
-        } else if (sharks.count < totalPlayersInEachTeam && sharksUnExp < unexperiencedPlayersInEachTeam && player["soccerExperience"] == "NO") {
+        } else if (Sharks.count < totalPlayersInEachTeam && sharksUnExp < unexperiencedPlayersInEachTeam && player["soccerExperience"] == "NO") {
         
             sharksUnExp+=1
-            sharks.append(player)
+            Sharks.append(player)
         
-        } else if (raptors.count < totalPlayersInEachTeam && raptorsExp < experiencedPlayersInEachTeam && player["soccerExperience"] == "YES") {
+        } else if (Raptors.count < totalPlayersInEachTeam && raptorsExp < experiencedPlayersInEachTeam && player["soccerExperience"] == "YES") {
         
             raptorsExp+=1
-            raptors.append(player)
+            Raptors.append(player)
         
-        } else if (raptors.count < totalPlayersInEachTeam && raptorsUnExp < unexperiencedPlayersInEachTeam && player["soccerExperience"] == "NO") {
+        } else if (Raptors.count < totalPlayersInEachTeam && raptorsUnExp < unexperiencedPlayersInEachTeam && player["soccerExperience"] == "NO") {
         
             raptorsUnExp+=1
-            raptors.append(player)
+            Raptors.append(player)
         
         }
     }
@@ -156,81 +154,38 @@ func dividePlayersEvenly() {
 dividePlayersEvenly()
 
 
+// This function generates personalized letters for all players' gaurdians
 
-//
-//for team in teams {
-//        
-//    if (team == dragons) {
-//        for player in team {
-//            
-//            print("Dear \(player["guardianName"]), \(player["name"]) is officially a part of the Dragons! We look forward to seeing you at \(player["name"])'s first practice on March 17, at 1pm!")
-//            
-//        }
-//        
-//    } else if (team == sharks) {
-//        for player in team {
-//                
-//            print("Dear \(player["guardianName"]), \(player["name"]) is officially a part of the Sharks! We look forward to seeing you at \(player["name"])'s first practice on March 17, at 3pm!")
-//            
-//        }
-//        
-//    } else {
-//        for player in team {
-//                
-//            print("Dear \(player["guardianName"]), \(player["name"]) is officially a part of the Raptors! We look forward to seeing you at \(player["name"])'s first practice on March 18, at 1pm!")
-//        }
-//        
-//    }
-//            
-//}
+var index = 0
 
-//var index = 0
-//
-//while index <= teams.count {
-//    
-//    for team in teams {
-//    
-//        if team == dragons {
-//            for player in team {
-//                
-//                index+=1
-//        
-//            print("Dear \(player["guardianName"]), \(player["name"]) is officially a part of the Dragons! We look forward to seeing you at \(player["name"])'s first practice on March 17, at 1pm!")
-//            }
-//        
-//        } else if team == sharks {
-//            
-//            for player in team {
-//                
-//                index+=1
-//                
-//                print("Dear \(player["guardianName"]), \(player["name"]) is officially a part of the Sharks! We look forward to seeing you at \(player["name"])'s first practice on March 17, at 3pm!")
-//            }
-//            
-//        } else {
-//            
-//            for player in team {
-//                
-//                index+=1
-//            
-//                print("Dear \(player["guardianName"]), \(player["name"]) is officially a part of the Raptors! We look forward to seeing you at \(player["name"])'s first practice on March 18, at 1pm!")
-//            }
-//        }
-//    }
-//}
+func generateLetters() {
 
-
-
-
-
-
-
-
-
-
+    while index < allPlayers.count {
     
+        for player in Dragons {
+    
+            index+=1
+    
+            print("Dear \(player["guardianName"]), \(player["name"]) is officially a part of the Dragons! We look forward to seeing you at \(player["name"])'s first practice on March 17, at 1pm!")
+        }
 
+        for player in Sharks {
+    
+            index+=1
+    
+            print("Dear \(player["guardianName"]), \(player["name"]) is officially a part of the Sharks! We look forward to seeing you at \(player["name"])'s first practice on March 17, at 3pm!")
+        }
 
+        for player in Raptors {
+    
+            index+=1
+    
+            print("Dear \(player["guardianName"]), \(player["name"]) is officially a part of the Raptors! We look forward to seeing you at \(player["name"])'s first practice on March 18, at 1pm!")
+    
+        }
+    }
+}
 
+// Calling function to generate personalized letters for all players' guardians
 
-
+generateLetters()
