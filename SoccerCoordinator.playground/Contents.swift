@@ -190,3 +190,20 @@ func generateLetters() {
 // Calling function to generate personalized letters for all players' guardians
 
 generateLetters()
+
+
+
+
+//// Experienced players' heights sorted from min to max
+//var experiencedHeights = [36, 41, 42, 42, 42, 43, 44, 44, 45]
+//
+//// Unexperienced players' heights sorted from min to max
+//var unexperiencedHeight = [39, 40, 41, 41, 43, 44, 45, 45, 47]
+
+/* A theory to sort evenly would be to start with the experienced array distribute 3 players in the 3 teams, on the next iteration distribute to the 3 three teams in reverse (starting from the one you distributed a player to last), and so on....
+    This way, the players' heights get distributed evenly. I will be implementing this later, but for now I need to move on :) ****tested theory manually below****
+ */
+ 
+//dr 36 43 44 41 41 47 --> 42
+//sh 41 42 44 40 43 45 --> 42.5
+//rp 42 42 45 39 44 45 --> 42.83
