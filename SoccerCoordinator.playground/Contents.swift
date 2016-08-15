@@ -50,7 +50,7 @@ var experiencedPlayers = 0
 
 var unexperiencedPlayers = 0
 
-func getPlayersExperience() -> (Int, Int) {
+func getPlayersExperience() {
     
     for player in allPlayers {
 
@@ -65,8 +65,6 @@ func getPlayersExperience() -> (Int, Int) {
     
         }
     }
-    
-    return (experiencedPlayers, unexperiencedPlayers)
 }
 
 // Calling function to get the number of experienced and unexperienced players within the soccer league
@@ -94,6 +92,9 @@ let unexperiencedPlayersInEachTeam = unexperiencedPlayers / teams.count
 
 let totalPlayersInEachTeam = experiencedPlayersInEachTeam + unexperiencedPlayersInEachTeam
 
+
+// This function sorts experienced and unexperienced players evenly into X number of teams (defined above)
+
 // Counters to keep track of experienced and nonexperienced players within each team
 
 var dragonsExpPlayers = 0
@@ -107,8 +108,6 @@ var sharksUnExpPlayers = 0
 var raptorsExpPlayers = 0
 
 var raptorsUnExpPlayers = 0
-
-// This function sorts experienced and unexperienced players evenly into X number of teams (defined above)
 
 func dividePlayersEvenly() {
 
