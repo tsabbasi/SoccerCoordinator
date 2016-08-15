@@ -1,6 +1,6 @@
-// Project | Soccer League Coordinator 
+// Project | Soccer League Coordinator
 
-// Single Player Data | Dictionaries
+// Single Player Data | Dictionaries — These hold each player's data.
 
 var player1Info = ["name": "Joe Smith", "height": "42", "soccerExperience": "YES", "guardianName": "Jim and Jan Smith"]
 
@@ -39,7 +39,7 @@ var player17Info = ["name": "Les Clay", "height": "42", "soccerExperience": "YES
 var player18Info = ["name": "Herschel Krustofski", "height": "45", "soccerExperience": "YES", "guardianName": "Hyman and Rachel Krustofski"]
 
 
-// Collection of total players within the soccer league
+// Collection of all players within the soccer league
 
 var allPlayers = [player1Info, player2Info, player3Info, player4Info, player5Info, player6Info, player7Info, player8Info, player9Info, player10Info, player11Info, player12Info, player13Info, player14Info, player15Info, player16Info, player17Info, player18Info]
 
@@ -96,17 +96,17 @@ let totalPlayersInEachTeam = experiencedPlayersInEachTeam + unexperiencedPlayers
 
 // Counters to keep track of experienced and nonexperienced players within each team
 
-var dragonsExp = 0
+var dragonsExpPlayers = 0
 
-var dragonsUnExp = 0
+var dragonsUnExpPlayers = 0
 
-var sharksExp = 0
+var sharksExpPlayers = 0
 
-var sharksUnExp = 0
+var sharksUnExpPlayers = 0
 
-var raptorsExp = 0
+var raptorsExpPlayers = 0
 
-var raptorsUnExp = 0
+var raptorsUnExpPlayers = 0
 
 // This function sorts experienced and unexperienced players evenly into X number of teams (defined above)
 
@@ -114,35 +114,35 @@ func dividePlayersEvenly() {
 
     for player in allPlayers {
     
-        if (Dragons.count < totalPlayersInEachTeam && dragonsExp < experiencedPlayersInEachTeam && player["soccerExperience"] == "YES") {
+        if (Dragons.count < totalPlayersInEachTeam && dragonsExpPlayers < experiencedPlayersInEachTeam && player["soccerExperience"] == "YES") {
         
-            dragonsExp+=1
+            dragonsExpPlayers+=1
         
             Dragons.append(player)
         
-        } else if (Dragons.count < totalPlayersInEachTeam && dragonsUnExp < unexperiencedPlayersInEachTeam && player["soccerExperience"] == "NO") {
+        } else if (Dragons.count < totalPlayersInEachTeam && dragonsUnExpPlayers < unexperiencedPlayersInEachTeam && player["soccerExperience"] == "NO") {
         
-            dragonsUnExp+=1
+            dragonsUnExpPlayers+=1
             Dragons.append(player)
         
-        } else if (Sharks.count < totalPlayersInEachTeam && sharksExp < experiencedPlayersInEachTeam && player["soccerExperience"] == "YES") {
+        } else if (Sharks.count < totalPlayersInEachTeam && sharksExpPlayers < experiencedPlayersInEachTeam && player["soccerExperience"] == "YES") {
         
-            sharksExp+=1
+            sharksExpPlayers+=1
             Sharks.append(player)
         
-        } else if (Sharks.count < totalPlayersInEachTeam && sharksUnExp < unexperiencedPlayersInEachTeam && player["soccerExperience"] == "NO") {
+        } else if (Sharks.count < totalPlayersInEachTeam && sharksUnExpPlayers < unexperiencedPlayersInEachTeam && player["soccerExperience"] == "NO") {
         
-            sharksUnExp+=1
+            sharksUnExpPlayers+=1
             Sharks.append(player)
         
-        } else if (Raptors.count < totalPlayersInEachTeam && raptorsExp < experiencedPlayersInEachTeam && player["soccerExperience"] == "YES") {
+        } else if (Raptors.count < totalPlayersInEachTeam && raptorsExpPlayers < experiencedPlayersInEachTeam && player["soccerExperience"] == "YES") {
         
-            raptorsExp+=1
+            raptorsExpPlayers+=1
             Raptors.append(player)
         
-        } else if (Raptors.count < totalPlayersInEachTeam && raptorsUnExp < unexperiencedPlayersInEachTeam && player["soccerExperience"] == "NO") {
+        } else if (Raptors.count < totalPlayersInEachTeam && raptorsUnExpPlayers < unexperiencedPlayersInEachTeam && player["soccerExperience"] == "NO") {
         
-            raptorsUnExp+=1
+            raptorsUnExpPlayers+=1
             Raptors.append(player)
         
         }
@@ -154,7 +154,9 @@ func dividePlayersEvenly() {
 dividePlayersEvenly()
 
 
-// This function generates personalized letters for all players' gaurdians
+// This function generates personalized letters for all players' guardians
+
+// counter to break while loop once iterated through all players
 
 var index = 0
 
