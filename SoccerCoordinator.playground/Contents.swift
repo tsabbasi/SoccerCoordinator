@@ -167,21 +167,21 @@ func generateLetters() {
     
             index+=1
     
-            print("Dear \(player["guardianName"]), \(player["name"]) is officially a part of the Dragons! We look forward to seeing you at \(player["name"])'s first practice on March 17, at 1pm!")
+            print("Dear \(player["guardianName"]!), \(player["name"]!) is officially a part of the Dragons! We look forward to seeing you at \(player["name"]!)'s first practice on March 17, at 1pm!")
         }
 
         for player in Sharks {
     
             index+=1
     
-            print("Dear \(player["guardianName"]), \(player["name"]) is officially a part of the Sharks! We look forward to seeing you at \(player["name"])'s first practice on March 17, at 3pm!")
+            print("Dear \(player["guardianName"]!), \(player["name"]!) is officially a part of the Sharks! We look forward to seeing you at \(player["name"]!)'s first practice on March 17, at 3pm!")
         }
 
         for player in Raptors {
     
             index+=1
     
-            print("Dear \(player["guardianName"]), \(player["name"]) is officially a part of the Raptors! We look forward to seeing you at \(player["name"])'s first practice on March 18, at 1pm!")
+            print("Dear \(player["guardianName"]!), \(player["name"]!) is officially a part of the Raptors! We look forward to seeing you at \(player["name"]!)'s first practice on March 18, at 1pm!")
     
         }
     }
